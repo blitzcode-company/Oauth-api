@@ -55,21 +55,3 @@ Utiliza el siguiente comando y guarda la `client_id` y `client_secret` generadas
 ```
 php artisan passport:client --password
 ```
-
-## Docker Compose
-
-Después de clonar los repositorios Blitzvideo-api y Oauth-api, procede a clonar el archivo Docker Compose:
-
-`Vía SSH:`
-
-```
-git clone git@gist.github.com:2f6cb08daf327f6999ecd28cb128056a.git
-```
-
-`Vía HTTPS:`
-
-```
-git clone https://gist.github.com/diegovega223/2f6cb08daf327f6999ecd28cb128056a.git
-```
-
-**Nota:** Asegúrate de colocar los archivos al mismo nivel de directorio que los repositorios Blitzvideo-api y Oauth-api.
