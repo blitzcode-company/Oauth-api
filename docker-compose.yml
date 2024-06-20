@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  oauthapi:
+    image: ggmartinez/laravel:php-82
+    container_name: oauth
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+    networks:
+      - blitzvideo-api_default
+networks:
+  blitzvideo-api_default:
+    external: true
