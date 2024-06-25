@@ -20,8 +20,9 @@ class UserController extends Controller
             'password' => 'required|confirmed',
         ]);
 
-        if($validation->fails())
-            return $validation->errors();
+        if($validation->fails()) {
+            return response()->json($validation->errors(), 422);
+        }
 
         return $this -> createUser($request);
         
