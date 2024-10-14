@@ -18,6 +18,7 @@ class UserController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed',
+            'fecha_de_nacimiento' => 'required'
         ]);
 
         if($validation->fails()) {
@@ -32,6 +33,7 @@ class UserController extends Controller
         $user = new User();
         $user -> name = $request -> post("name");
         $user -> email = $request -> post("email");
+        $user -> fecha_de_nacimiento = $request -> post("fecha_de_nacimiento");
         $user -> password = Hash::make($request -> post("password"));   
         $user -> save();
         return $user;
