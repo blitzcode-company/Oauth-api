@@ -46,6 +46,12 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+            Route::prefix('oauth')
+                ->middleware(['api', 'passport.personalizado', 'throttle:5,1'])
+                ->namespace($this->namespace)
+                ->group(function () {
+               
+                });    
         });
     }
 

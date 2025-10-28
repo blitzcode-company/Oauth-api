@@ -15,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
+    Route::post('/oauth/token', [AccessTokenController::class, 'issueToken'])
+    ->middleware('errores.passport');
 });
